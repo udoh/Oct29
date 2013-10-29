@@ -80,7 +80,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="9CI-Yl-lfU" kind="push" identifier="showScore" id="BWk-VT-Zrv"/>
+                        <segue destination="9CI-Yl-lfU" kind="modal" identifier="showScore" modalTransitionStyle="coverVertical" animates="NO" id="BWk-VT-Zrv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUH-1Z-yWC" userLabel="First Responder" sceneMemberID="firstResponder"/>

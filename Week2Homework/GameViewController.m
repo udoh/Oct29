@@ -84,6 +84,7 @@
 
 - (void)stepWorld
 {
+    // Advance rockets
     for (Rocket *rocket in rockets) {
         rocket.center = CGPointMake(rocket.center.x + rocket.deltaX, rocket.center.y + rocket.deltaY);
         if (!CGRectIntersectsRect(rocket.frame, self.view.bounds)) {
@@ -91,7 +92,7 @@
         }
     }
     
-    // Update center
+    // Advance asteroids
     for (Asteroid *asteroid in asteriods) {
         asteroid.center = CGPointMake(asteroid.center.x + asteroid.deltaX, asteroid.center.y + asteroid.deltaY);
         
@@ -107,6 +108,7 @@
                 asteroid.deltaX *= -1;
             }
             
+            // Check collision
             for (Rocket *rocket in rockets) {
                 if (CGRectIntersectsRect(asteroid.frame, rocket.frame)) {
                     [deletedAsteroids addObject:asteroid];
